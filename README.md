@@ -1,4 +1,4 @@
-# DSBSC
+<img width="1561" height="933" alt="image" src="https://github.com/user-attachments/assets/66fdf457-5b4d-464e-a1e4-b64673d944ba" /># DSBSC
 
 
 EX NO: 2	DSB-SC-AM MODULATOR AND DEMODULATOR
@@ -48,11 +48,36 @@ Model Waveform
 <img width="703" height="679" alt="image" src="https://github.com/user-attachments/assets/e7c7c7f8-ccf2-41ac-b1f3-325989941a6f" />
 
 Program
+```
+Am=5.6;
+fm=529;
+Ac=11.2;
+fc=5290
+fs=52900;
+t=0:1/fs:2/fm;
+m=Am*cos(2*3.14*fm*t);
+subplot(3,1,1);
+plot(t,m);
+c=Ac*cos(2*3.14*fc*t);
+subplot(3,1,2);
+plot(t,c);
+s1=(Ac+m).*cos(2*3.14*fc*t);
+s2=(Ac-m).*cos(2*3.14*fc*t);
+S = s1 - s2;
+subplot(3,1,3);
+plot(t,S);
+```
+
 
 Output Graph
+<img width="1654" height="993" alt="image" src="https://github.com/user-attachments/assets/92fb4eeb-74ed-416b-8dc6-540cbf56bcf7" />
+
 
 
 Tablular Column
+<img width="1561" height="700" alt="image" src="https://github.com/user-attachments/assets/7839e12f-d11f-4e43-812e-eab6d03dff28" />
+
+
 
 
 Result
